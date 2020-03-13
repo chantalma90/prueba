@@ -36,4 +36,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static function example($id) {
+        $user = new User();
+        $user->id = $id;
+        $user->name = 'Chantal';
+        $user->password = '123456';
+        $user->email = 'chantalmontanesat@gmail.com';
+        return $user;
+    }
 }
